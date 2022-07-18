@@ -5,6 +5,12 @@ import java.util.Scanner;
 public class EmployeeWages extends EmployeeAttendance
 {
     /*
+    Static Class Variables To Calculate Employee Wages Using Class Methods
+     */
+    static int fullDayWork = 8 ;
+    static int wagePerHour = 20 ;
+    static int totalWage = 0 ;
+    /*
     Main Class to create Objects and access Class function
      */
     public static void main(String[] args)
@@ -34,5 +40,26 @@ public class EmployeeWages extends EmployeeAttendance
                 }
                 break;
         }
+
+        System.out.println("\n --------Calculating Wage Inside the Main Class--------");
+        int attendance = employee.getAttendance();
+        calculateWage(attendance);
+    }
+
+    /*
+    Refactor the Code to write a Class Method to Compute Employee Wage
+     */
+    static void calculateWage( int attendance)
+    {
+        if ( attendance == 0)
+        {
+            System.out.println("Employee Salary = 0 ");
+        }
+        else
+        {
+            totalWage = fullDayWork * wagePerHour ;
+            System.out.println("Employee Salary = " + totalWage );
+        }
+
     }
 }
