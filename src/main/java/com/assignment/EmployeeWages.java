@@ -11,6 +11,7 @@ public class EmployeeWages extends EmployeeAttendance
         System.out.println("--------------------------------------------");
         EmployeeAttendance employee = new EmployeeAttendance();
         int employeeAttendance = employee.getAttendance();
+        employee.calculateWage(employeeAttendance);
 
     }
 }
