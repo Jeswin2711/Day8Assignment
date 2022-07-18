@@ -1,6 +1,5 @@
 package com.assignment;
 
-import java.security.cert.X509Certificate;
 import java.util.Scanner;
 
 public class EmployeeWages extends EmployeeAttendance
@@ -22,12 +21,16 @@ public class EmployeeWages extends EmployeeAttendance
             case 0 :
                 System.out.println("---- PART TIME EMPLOYEE ----");
                 int partTimeEmp = employee.getAttendance();
-                employee.partTimeWage(partTimeEmp);
+                employee.calculateWage(partTimeEmp , 0);
                 break;
             case 1 :
                 System.out.println("---- FULL TIME EMPLOYEE ----");
                 int fullTimeEmp = employee.getAttendance();
-                employee.calculateWage(fullTimeEmp);
+                employee.calculateWage(fullTimeEmp , 1);
+                if ( fullTimeEmp != 0 )
+                {
+                    employee.monthlyWage();
+                }
                 break;
         }
     }
