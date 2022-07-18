@@ -1,5 +1,8 @@
 package com.assignment;
 
+import java.security.cert.X509Certificate;
+import java.util.Scanner;
+
 public class EmployeeWages extends EmployeeAttendance
 {
     /*
@@ -10,10 +13,22 @@ public class EmployeeWages extends EmployeeAttendance
         System.out.println("Welcome To Employee Wage Computation Program");
         System.out.println("--------------------------------------------");
         EmployeeAttendance employee = new EmployeeAttendance();
-        int employeeAttendance = employee.getAttendance();
-        employee.calculateWage(employeeAttendance);
-        int partTimeEmployee = employee.getAttendance();
-        employee.partTimeWage(partTimeEmployee);
-
+        System.out.println("Employee Role");
+        System.out.println("Enter 0 For PART-TIME OR Enter 1 for FULL-TIME");
+        Scanner scanner = new Scanner(System.in);
+        int ch = scanner.nextInt();
+        switch (ch)
+        {
+            case 0 :
+                System.out.println("---- PART TIME EMPLOYEE ----");
+                int partTimeEmp = employee.getAttendance();
+                employee.partTimeWage(partTimeEmp);
+                break;
+            case 1 :
+                System.out.println("---- FULL TIME EMPLOYEE ----");
+                int fullTimeEmp = employee.getAttendance();
+                employee.calculateWage(fullTimeEmp);
+                break;
+        }
     }
 }

@@ -7,7 +7,6 @@ class DailyWage
      */
     void calculateWage(int attendance)
     {
-        System.out.println("---- FOR FULL TIME EMPLOYEE ----");
         int fullDayWork = 8 ;
         int wagePerHour = 20 ;
         int totalWage = 0 ;
@@ -27,7 +26,6 @@ class DailyWage
      */
     void partTimeWage(int attendance)
     {
-        System.out.println("---- FOR PART TIME EMPLOYEE ----");
         int fullDayWork = 4 ;
         int wagePerHour = 20 ;
         int totalWage = 0 ;
