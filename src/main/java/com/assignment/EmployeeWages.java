@@ -12,6 +12,8 @@ public class EmployeeWages extends EmployeeAttendance
         EmployeeAttendance employee = new EmployeeAttendance();
         int employeeAttendance = employee.getAttendance();
         employee.calculateWage(employeeAttendance);
+        int partTimeEmployee = employee.getAttendance();
+        employee.partTimeWage(partTimeEmployee);
 
     }
 }
