@@ -8,7 +8,7 @@ Class to return Employee Attendance
  */
 
 
-class EmployeeAttendance
+class EmployeeAttendance extends DailyWage
 {
     private int attendance;
 
