@@ -30,6 +30,7 @@ public class EmployeeWages extends EmployeeAttendance
                 if ( fullTimeEmp != 0 )
                 {
                     employee.monthlyWage();
+                    System.out.println("Employee Wages Using Condition " + employee.calculateWagesUsingCondition(fullTimeEmp));
                 }
                 break;
         }
