@@ -51,15 +51,7 @@ public class EmployeeWages extends EmployeeAttendance
      */
     static void calculateWage( int attendance)
     {
-
-        if ( attendance == 0)
-        {
-            System.out.println("Employee Salary = 0 ");
-        }
-        else
-        {
-            totalWage = fullDayWork * wagePerHour ;
-            System.out.println("Employee Salary = " + totalWage );
-        }
+        totalWage = fullDayWork * wagePerHour ;
+        System.out.println("Employee Salary = " + totalWage );
     }
 }
