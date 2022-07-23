@@ -10,10 +10,6 @@ public class EmployeeMain
     public static void main(String[] args) {
         System.out.println("Welcome To Employee Wage Computation Program");
         Scanner sc = new Scanner(System.in);
-        System.out.println("-----------------USE CASE-------------------");
-        EmployeeAttendance employeeAttendance = new EmployeeAttendance();
-        employeeAttendance.getAttendance();
-        System.out.println("--------------------------------------------");
         EmpWageBuilder companyDetails = new EmpWageBuilder();
         while (true) {
             System.out.println("Enter 1 to Add a Company");
@@ -32,22 +28,22 @@ public class EmployeeMain
                     companyDetails.showAllCompany();
                     break;
                 case 3:
-                    System.out.println("\n Enter Company Name");
+                    System.out.println("\nEnter Company Name");
                     String companyName = sc.next();
                     companyDetails.showCompany(companyName);
                     break;
                 case 4:
-                    System.out.println("\n Enter Company Name");
+                    System.out.println("\nEnter Company Name");
                     companyName = sc.next();
                     companyDetails.getTotalWage(companyName);
                     break;
                 case 5:
-                    System.out.println("\n Enter Company Name");
+                    System.out.println("\nEnter Company Name");
                     companyName = sc.next();
                     companyDetails.deleteCompany(companyName);
                     break;
                 case 6:
-                    System.out.println("\n Enter Company Name");
+                    System.out.println("\nEnter Company Name");
                     companyName = sc.next();
                     companyDetails.employeeDetails(companyName);
                     break;

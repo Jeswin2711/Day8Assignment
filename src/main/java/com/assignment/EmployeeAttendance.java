@@ -15,18 +15,18 @@ class EmployeeAttendance extends DailyWage
     /*
     function to return Employee Attendance
      */
+
     int getAttendance()
     {
         DecimalFormat df = new DecimalFormat("#");
         attendance = Integer.parseInt(df.format(Math.floor(Math.random() * 1000 % 2)));
         if (attendance == 0 )
         {
-            System.out.println("\n Employee is Absent");
+            attendance = 0;
         }
         else
         {
-            System.out.println("\n Employee is Present");
-            System.out.println(calculateWagesUsingCondition(attendance));
+            attendance = 1;
         }
         return attendance;
     }
