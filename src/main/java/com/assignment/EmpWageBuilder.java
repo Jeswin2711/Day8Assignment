@@ -145,26 +145,27 @@ public class EmpWageBuilder implements CompanyFunctions
                 int attendance = employeeAttendance.getAttendance();
                 if (attendance == 0)
                 {
-                    System.out.println("\n Employee is Absent");
-                    System.out.println("\n Cannot Calculate Wages for that Employee");
+                    System.out.println("\nEmployee is Absent");
+                    System.out.println("Cannot Calculate Wages for that Employee");
                 }
                 else
                 {
                     if(employeeAttendance.employeeDetails() == 1)
                     {
-                        System.out.println("\n Full Time Employee");
-                        System.out.println("\n The Daily Wage of the Employee is " + company.getDailyWage() );
-                        System.out.println("\n The Monthly Wage of the Employee is " + company.getMonthlySalary() );
+                        System.out.println("\nFull Time Employee Wages");
+                        System.out.println("\nThe Daily Wage of the Employee is " + company.getDailyWage() );
+                        System.out.println("\nThe Monthly Wage of the Employee is " + company.getMonthlySalary() );
                     }
                     else
                     {
-                        System.out.println("\n Part Time Employee");
-                        System.out.println("\n The Daily Wage of the Employee is " + (company.getDailyWage()/2));
+                        System.out.println("\nPart Time Employee Wages");
+                        System.out.println("\nThe Daily Wage of the Employee is " + (company.getDailyWage()/2));
                     }
 
 
                 }
-                System.out.println("The total Wage of the Company " + companyName + " is " + company.getMonthlySalary() );
+                System.out.println("The Basic Salary of an Employee in the Company" + companyName + " is " + company.getMonthlySalary());
+                System.out.println("Calculating Salary Using Condition "+ dailyWage.calculateWagesUsingCondition(attendance) +"\n");
                 flag = true;
                 break;
             }

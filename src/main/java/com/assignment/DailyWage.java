@@ -45,7 +45,6 @@ class DailyWage
             }
             else
             {
-                System.out.println("Employee is Absent");
                 break;
             }
             switch (ch)
